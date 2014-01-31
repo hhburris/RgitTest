@@ -65,3 +65,12 @@ take.log = TRUE
 
 #Try to upload to GIT
 
+# Better for miRNA data because housekeeping is an issue w/ miRNA
+NanoString.mRNA.norm <- NanoStringNorm(
+  x = NanoString.mRNA,
+  CodeCount = 'geo.mean',
+  Background = 'mean.2sd',
+  SampleContent = 'top.geo.mean',
+  round.values = TRUE,
+  take.log = TRUE
+);
